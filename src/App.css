@@ -1,0 +1,8 @@
+.app-bar {
+  background-color: #1976d2; /* nice blue */
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
