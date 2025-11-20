@@ -23,7 +23,7 @@ export default function Companies() {
     },
     {
       name: "Deloitte",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Deloitte_logo.svg",
+      logo: "https://logotyp.us/file/deloitte.svg",
       slug: "deloitte",
     },
     {
@@ -33,12 +33,12 @@ export default function Companies() {
     },
     {
       name: "Accenture",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/8/85/Accenture.svg",
+      logo: "https://www.pngmart.com/files/23/Accenture-Logo-PNG-HD.png",
       slug: "accenture",
     },
     {
       name: "PwC",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/8/85/PwC_logo.svg",
+      logo: "https://www.pngall.com/wp-content/uploads/15/PWC-Logo-PNG-Image.png",
       slug: "pwc",
     },
   ];

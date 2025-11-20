@@ -1,8 +1,11 @@
-import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
+import { Box, Typography, Grid, Card } from "@mui/material";
 import Navbar from "../components/Navbar";
 import StatsCard from "../components/StatsCard";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+  const navigate = useNavigate();
+
   // Company list with online logo URLs (NO DOWNLOADS NEEDED)
   const companies = [
     {
@@ -19,7 +22,7 @@ export default function Dashboard() {
     },
     {
       name: "Deloitte",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Deloitte_logo.svg",
+      logo: "https://logotyp.us/file/deloitte.svg",
     },
     {
       name: "IBM",
@@ -27,11 +30,11 @@ export default function Dashboard() {
     },
     {
       name: "Accenture",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/8/85/Accenture.svg",
+      logo: "https://www.pngmart.com/files/23/Accenture-Logo-PNG-HD.png",
     },
     {
       name: "PwC",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/8/85/PwC_logo.svg",
+      logo: "https://www.pngall.com/wp-content/uploads/15/PWC-Logo-PNG-Image.png",
     },
   ];
 
@@ -83,6 +86,7 @@ export default function Dashboard() {
                   transition: "0.3s",
                   ":hover": { transform: "scale(1.05)" },
                 }}
+                onClick={() => navigate(`/companies/${c.name.toLowerCase()}`)}
               >
                 <img
                   src={c.logo}
@@ -108,6 +112,7 @@ export default function Dashboard() {
         </Typography>
 
         <Grid container spacing={3}>
+          {/* Add Experience */}
           <Grid item>
             <Card
               sx={{
@@ -118,13 +123,16 @@ export default function Dashboard() {
                 boxShadow: 2,
                 borderRadius: 2,
                 cursor: "pointer",
-                ":hover": { boxShadow: 5 },
+                transition: "0.3s",
+                ":hover": { boxShadow: 5, transform: "scale(1.03)" },
               }}
+              onClick={() => navigate("/add-experience")}
             >
               <Typography sx={{ fontWeight: 600 }}>Add Experience</Typography>
             </Card>
           </Grid>
 
+          {/* Forum */}
           <Grid item>
             <Card
               sx={{
@@ -135,13 +143,16 @@ export default function Dashboard() {
                 boxShadow: 2,
                 borderRadius: 2,
                 cursor: "pointer",
-                ":hover": { boxShadow: 5 },
+                transition: "0.3s",
+                ":hover": { boxShadow: 5, transform: "scale(1.03)" },
               }}
+              onClick={() => navigate("/forum")}
             >
               <Typography sx={{ fontWeight: 600 }}>Join Forum</Typography>
             </Card>
           </Grid>
 
+          {/* Graduate Programs */}
           <Grid item>
             <Card
               sx={{
@@ -152,8 +163,10 @@ export default function Dashboard() {
                 boxShadow: 2,
                 borderRadius: 2,
                 cursor: "pointer",
-                ":hover": { boxShadow: 5 },
+                transition: "0.3s",
+                ":hover": { boxShadow: 5, transform: "scale(1.03)" },
               }}
+              onClick={() => navigate("/graduates")}
             >
               <Typography sx={{ fontWeight: 600 }}>Graduate Programs</Typography>
             </Card>
