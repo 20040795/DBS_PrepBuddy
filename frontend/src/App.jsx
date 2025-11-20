@@ -9,6 +9,7 @@ import AskQuestion from "./pages/AskQuestion";
 import GraduatePrograms from "./pages/GraduatePrograms";
 import AddExperience from "./pages/AddExperience";
 import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 
 
 
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/graduates" element={<GraduatePrograms />} />
         <Route path="/add-experience" element={<AddExperience />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
 
 
 
