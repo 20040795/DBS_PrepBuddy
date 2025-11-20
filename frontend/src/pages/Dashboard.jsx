@@ -4,6 +4,12 @@ import StatsCard from "../components/StatsCard";
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+  const token = localStorage.getItem("token");
+if (!token) {
+  navigate("/");
+  return null;
+}
+
   const navigate = useNavigate();
 
   // Company list with online logo URLs (NO DOWNLOADS NEEDED)

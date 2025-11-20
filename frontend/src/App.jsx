@@ -8,6 +8,7 @@ import ForumDiscussion from "./pages/ForumDiscussion";
 import AskQuestion from "./pages/AskQuestion";
 import GraduatePrograms from "./pages/GraduatePrograms";
 import AddExperience from "./pages/AddExperience";
+import Register from "./pages/Register";
 
 
 
@@ -27,6 +28,8 @@ export default function App() {
         <Route path="/forum/ask" element={<AskQuestion />} />
         <Route path="/graduates" element={<GraduatePrograms />} />
         <Route path="/add-experience" element={<AddExperience />} />
+        <Route path="/register" element={<Register />} />
+
 
 
 

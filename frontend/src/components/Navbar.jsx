@@ -1,32 +1,49 @@
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import dbsLogo from "/dbs.png";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");   // remove token
+    navigate("/");                     // back to login
+  };
+
   return (
     <AppBar position="static" sx={{ bgcolor: "#003366" }}>
       <Toolbar sx={{ display: "flex", alignItems: "center" }}>
         
-        {/* Left: DBS Logo */}
+        {/* DBS Logo */}
         <Box sx={{ display: "flex", alignItems: "center", mr: 4 }}>
           <img 
-            src={dbsLogo} 
-            alt="DBS Logo" 
-            style={{ width: "45px", marginRight: "10px" }}
+            src={dbsLogo}
+            alt="DBS Logo"
+            style={{ width: "40px", marginRight: "10px" }}
           />
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
             DBS Portal
           </Typography>
         </Box>
 
-        {/* Right: Navigation */}
-        <Box sx={{ display: "flex", gap: 3, ml: "auto" }}>
+        {/* Navigation Links */}
+        <Box sx={{ display: "flex", gap: 3, ml: "auto", mr: 3 }}>
           <Button color="inherit" component={Link} to="/dashboard">Dashboard</Button>
           <Button color="inherit" component={Link} to="/companies">Companies</Button>
           <Button color="inherit" component={Link} to="/coding">Coding Practice</Button>
           <Button color="inherit" component={Link} to="/forum">Forum</Button>
-          <Button color="inherit" component={Link} to="/graduates">Graduate Programs</Button>
+          <Button color="inherit" component={Link} to="/graduates">Graduates</Button>
         </Box>
+
+        {/* LOGOUT BUTTON */}
+        <Button 
+          variant="outlined" 
+          sx={{ color: "white", borderColor: "white" }}
+          onClick={handleLogout}
+        >
+          Logout
+        </Button>
+
       </Toolbar>
     </AppBar>
   );
