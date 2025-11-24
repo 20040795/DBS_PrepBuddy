@@ -9,7 +9,6 @@ export default function Navbar() {
   return (
     <AppBar position="static" sx={{ bgcolor: "#003366" }}>
       <Toolbar sx={{ display: "flex", alignItems: "center" }}>
-        
         {}
         <Box sx={{ display: "flex", alignItems: "center", mr: 4 }}>
           <img 
