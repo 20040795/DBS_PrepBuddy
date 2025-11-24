@@ -1,20 +1,16 @@
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import dbsLogo from "/dbs.png";
-
 export default function Navbar() {
   const navigate = useNavigate();
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");   // remove token
-    navigate("/");                     // back to login
+  const handleLogout = () => {localStorage.removeItem("token");   
+  navigate("/");                    
   };
-
   return (
     <AppBar position="static" sx={{ bgcolor: "#003366" }}>
       <Toolbar sx={{ display: "flex", alignItems: "center" }}>
         
-        {/* DBS Logo */}
+        {}
         <Box sx={{ display: "flex", alignItems: "center", mr: 4 }}>
           <img 
             src={dbsLogo}
@@ -25,8 +21,7 @@ export default function Navbar() {
             DBS Portal
           </Typography>
         </Box>
-
-        {/* Navigation Links */}
+        {}
         <Box sx={{ display: "flex", gap: 3, ml: "auto", mr: 3 }}>
           <Button color="inherit" component={Link} to="/dashboard">Dashboard</Button>
           <Button color="inherit" component={Link} to="/companies">Companies</Button>
@@ -34,8 +29,7 @@ export default function Navbar() {
           <Button color="inherit" component={Link} to="/forum">Forum</Button>
           <Button color="inherit" component={Link} to="/graduates">Graduates</Button>
         </Box>
-
-        {/* LOGOUT BUTTON */}
+        {}
         <Button 
           variant="outlined" 
           sx={{ color: "white", borderColor: "white" }}
