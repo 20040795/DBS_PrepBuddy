@@ -20,6 +20,7 @@ export default function AddExperience() {
     "Accenture",
     "PwC",
   ];
+  
 
   const difficulties = ["Easy", "Medium", "Hard"];
 
