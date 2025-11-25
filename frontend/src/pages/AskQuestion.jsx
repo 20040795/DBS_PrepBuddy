@@ -40,7 +40,7 @@ export default function AskQuestion() {
           </Typography>
 
           <CardContent>
-            {/* Question Title */}
+            
             <TextField
               label="Question Title"
               fullWidth
@@ -49,7 +49,6 @@ export default function AskQuestion() {
               onChange={(e) => setTitle(e.target.value)}
             />
 
-            {/* Description */}
             <TextField
               label="Describe your question"
               fullWidth
