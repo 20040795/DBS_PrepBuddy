@@ -21,6 +21,7 @@ export default function Navbar() {
           </Typography>
         </Box>
         {}
+        
         <Box sx={{ display: "flex", gap: 3, ml: "auto", mr: 3 }}>
           <Button color="inherit" component={Link} to="/dashboard">Dashboard</Button>
           <Button color="inherit" component={Link} to="/companies">Companies</Button>
