@@ -59,7 +59,6 @@ export default function AskQuestion() {
               onChange={(e) => setDesc(e.target.value)}
             />
 
-            {/* Submit Button */}
             <Button
               variant="contained"
               sx={{ bgcolor: "#003366" }}
