@@ -21,7 +21,7 @@ export default function AskQuestion() {
 
     alert("Your question has been submitted! (Backend will save this later)");
 
-    // reset form
+    //reset form
     setTitle("");
     setDesc("");
   };

@@ -55,7 +55,6 @@ export default function CodingPractice() {
           Coding Practice
         </Typography>
 
-        {/* Categories Section */}
         <Typography
           variant="h5"
           sx={{ mb: 2, fontWeight: "bold", color: "#003366" }}
@@ -97,7 +96,6 @@ export default function CodingPractice() {
           ))}
         </Grid>
 
-        {/* DBS Frequently Asked Questions */}
         <Typography
           variant="h5"
           sx={{ mb: 2, fontWeight: "bold", color: "#003366" }}
@@ -113,7 +111,7 @@ export default function CodingPractice() {
           ))}
         </Box>
 
-        {/* External Resources */}
+   
         <Typography
           variant="h5"
           sx={{ mt: 5, mb: 2, fontWeight: "bold", color: "#003366" }}
